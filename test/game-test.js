@@ -4,15 +4,17 @@ const expect = chai.expect;
 import Game from '../src/Game.js';
 import Player from '../src/Player.js';
 import Round from '../src/Round.js';
+import gamedata from '../src/gamedata.js';
+
 
 describe('Game Class', () => {
-  it.skip('should have a named Player One', function() {
+  it('should have a named Player One', function() {
     let player1 = new Player('Jacob');
     let game = new Game(player1);
 
     expect(game.player1.name).to.equal('Jacob');
   });
-  it.skip('should also have a named Player Two', function () {
+  it('should also have a named Player Two', function () {
     let player1 = new Player('Jacob');
     let player2 = new Player('Ryan');
     let game = new Game(player1, player2);
@@ -30,19 +32,19 @@ describe('Game Class', () => {
     let game = new Game();
 
     expect(game.currentRound).to.equal(0);
-    game.newRound();
+    game.startNewRound(game);
     expect(game.currentRound).to.equal(1);
-    game.newRound();
+    game.startNewRound(game);
     expect(game.currentRound).to.equal(2);
   });
-  it.skip('should not be able to go past three rounds', function () {
+  it('should not be able to go past three rounds', function () {
     let game = new Game();
 
-    game.newRound();
-    game.newRound();
-    game.newRound();
+    game.startNewRound(game);
+    game.startNewRound(game);
+    game.startNewRound(game);
     expect(game.currentRound).to.equal(3);
-    game.newRound();
+    game.startNewRound(game);
     expect(game.currentRound).to.equal(3);
   });
   it.skip('should start with no used surveys', function () {
@@ -58,15 +60,15 @@ describe('Game Class', () => {
   it.skip('should create a new instance of Round when a new round is started', function () {
     let game = new Game();
 
-    game.newRound()
+    game.startNewRound(game)
     expect(round1).to.equal(true);
   });
   it.skip('should create an instance of FinalRound if it is round three', function () {
     let game = new Game();
 
-    game.newRound()
-    game.newRound()
-    game.newRound()
+    game.startNewRound(game)
+    game.startNewRound(game)
+    game.startNewRound(game)
     expect(round).to.equal(true);
   });
 });

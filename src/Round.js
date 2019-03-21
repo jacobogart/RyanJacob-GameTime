@@ -1,14 +1,19 @@
-import gamedata from './gamedata.js';
+import gamedata from '../src/gamedata.js';
+import Game from './Game.js';
 
 class Round {
-  constructor() {
-    this.survey = this.getSurvey(gamedata.surveys);
+  constructor(game) {
+    this.survey = this.getSurvey(gamedata.surveys, game);
     this.answers = this.getAnswers(gamedata.answers);
   }
-
-  getSurvey(surveys) {
-    const randomIndex = Math.floor(Math.random() * surveys.length);
-    return surveys.splice(randomIndex, 1)[0];
+  
+  getSurvey(surveys, game) {
+    let randomIndex = Math.floor(Math.random() * surveys.length);
+    while (game.usedSurveys.includes(randomIndex)) {
+      randomIndex = Math.floor(Math.random() * surveys.length)
+    }
+    game.usedSurveys.push(randomIndex);
+    return gamedata.surveys[randomIndex];
   }
 
   getAnswers(answers) {
