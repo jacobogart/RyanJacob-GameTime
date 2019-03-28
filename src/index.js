@@ -34,8 +34,7 @@ import './images/final-round.png';
 import './images/name-background.png';
 import './images/left-sword.png';
 import './images/right-sword.png';
-
-
+import './images/screenshot.png';
 
 import domUpdates from './domUpdates.js';
 import data from './gamedata.js';
