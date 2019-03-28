@@ -51,13 +51,6 @@ describe('Player', function() {
     it('should be able to make a guess', function() {
       expect(player1).to.respondTo('makeGuess');
     });
-    it('should only accept strings in a guess', function() {
-      expect(player1.makeGuess(10)).to.equal('Error: Argument Not String');
-      expect(player1.makeGuess(true)).to.equal('Error: Argument Not String');
-      expect(player1.makeGuess([1, 2])).to.equal('Error: Argument Not String');
-      expect(player1.makeGuess({name: 'Ryan'})).to.equal('Error: Argument Not String');
-      expect(player1.makeGuess('hi', game, round)).to.not.equal('Error: Argument Not String');
-    });
     it('should switch players after making a guess', function () {
       player1.makeGuess('guess', game, round);
       expect(player1.isTurn).to.equal(false);

@@ -10,7 +10,7 @@ import Round from '../src/Round.js';
 import FinalRound from '../src/FinalRound.js';
 import domUpdates from '../src/domUpdates.js';
 
-chai.spy.on(domUpdates, ['animateKnight', 'populateSurvery', 'populateAnswers'], () => true);
+chai.spy.on(domUpdates, ['animateKnight', 'populateSurvery', 'populateAnswers', 'hideGame', 'hideGuessMessages'], () => true);
 
 describe('Game Class', () => {
   let game, player1, player2;
