@@ -1,5 +1,4 @@
 import domUpdates from './domUpdates.js';
-import $ from 'jquery';
 
 class Player {
   constructor(name, num) {
