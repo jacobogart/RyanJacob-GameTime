@@ -9,7 +9,7 @@ Run `npm install` from the root directory
 
 Run `npm start` and visit localhost:8080 in your browser
 
-![Feud of Families Screenshot](./src/images/screenshot.png)
+![Feud of Families Screenshot](../src/images/screenshot.png)
 
 ## Testing
 Website is fully tested with Mocha and Chai
