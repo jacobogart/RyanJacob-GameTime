@@ -2,6 +2,8 @@
 #### [Ryan Barnett](https://github.com/RyanDBarnett) & [Jacob Bogart](https://github.com/jacobogart)
 An educational project utilizing Object Oriented Programing and Test Driven Development to create a fully-playable web version of the gameshow Family Feud. 
 
+### [Playable Version](https://jacobogart.github.io/RyanJacob-GameTime/)
+
 ## Instalation
 Clone the repo - https://github.com/jacobogart/RyanJacob-GameTime.git
 
