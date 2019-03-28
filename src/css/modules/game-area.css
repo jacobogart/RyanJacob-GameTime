@@ -3,7 +3,7 @@
 }
 
 .game-area {
-  display: none;
+  display: grid;
   height: 90%;
   justify-items: center;
   margin: 0 auto;
