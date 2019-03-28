@@ -42,9 +42,10 @@ import Player from './Player.js';
 
 let game;
 domUpdates.toggleGameArea(false);
+domUpdates.toggleStartNewGameBtn(false);
 
 $(".name-btn").on("click", startGame);
-$(".new-game-btn").on("click", resetGame);
+$(".new-game-btn").on("click", startNewGame);
 $(".guess-btn").on("click", guess);
 $(".guess-input").on("keypress", function(e) {
   if (e.keyCode === 13) {
@@ -65,10 +66,8 @@ function startGame() {
   game.round = game.startNewRound();
 }
 
-function resetGame() {
-  domUpdates.toggleGameArea(false);
-  domUpdates.toggleNameInputContainer(true);
-  domUpdates.toggleNameInputs(true);
+function startNewGame() {
+  domUpdates.resetGame();
 }
 
 function guess() {

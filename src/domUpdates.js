@@ -10,6 +10,7 @@ const domUpdates = {
   revealGame: () => {
     this.toggleNameInputContainer(false);
     this.toggleGameArea(true);
+    this.toggleStartNewGameBtn(true);
   },
 
   hideGame: () => {
@@ -17,6 +18,18 @@ const domUpdates = {
     this.toggleNameInputs(false);
     this.toggleMultiplierInputs(true);
     this.toggleNameInputContainer(true);
+  },
+
+  resetGame: () => {
+    this.toggleGameArea(false);
+    this.toggleNameInputContainer(true);
+    this.toggleNameInputs(true);
+    this.toggleStartNewGameBtn(false);
+    this.resetScore();
+  },
+
+  toggleStartNewGameBtn: (showThis) => {
+    $(".new-game-btn").toggle(showThis);
   },
 
   toggleNameInputContainer: (showThis) => {
@@ -61,6 +74,11 @@ const domUpdates = {
     player === 1 ? $(".sb-one > h6").text(score) : $(".sb-two > h6").text(score);
   },
 
+  resetScore: () => {
+    $(".sb-one > h6").text('0');
+    $(".sb-two > h6").text('0');
+  },
+  
   toggleActivePlayer: (player1Turn) => {
     this.addSwordTurnIndicator(player1Turn);
     this.removeOppositeSword(player1Turn);
