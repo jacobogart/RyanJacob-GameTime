@@ -7,7 +7,6 @@ import $ from 'jquery';
 // An example of how you tell webpack to apply a CSS file
 import './css/normalize.css';
 import './css/base.css';
-import './css/state.css';
 import './css/layout.css';
 import './css/modules/result-box.css';
 import './css/modules/guess-input.css';
@@ -19,6 +18,7 @@ import './css/modules/info-page.css';
 import './css/modules/multiplier.css';
 import './css/modules/timer.css';
 import './css/modules/winner.css';
+import './css/state.css';
 
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
@@ -32,6 +32,9 @@ import './images/round-one.png';
 import './images/round-two.png';
 import './images/final-round.png';
 import './images/name-background.png';
+import './images/left-sword.png';
+import './images/right-sword.png';
+
 
 
 import domUpdates from './domUpdates.js';

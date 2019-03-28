@@ -46,13 +46,12 @@ const domUpdates = {
   },
 
   toggleActivePlayer: function(player1Turn) {
-    if(player1Turn) {
-      // $(".pb-one").prepend("<img class='left-sword sword' src='./images/left-sword.png' alt='sword pointing right' />");
-      $(".pb-one").addClass("active");
-      $(".pb-two").removeClass("active");
+    if (player1Turn) {
+      $(".pb-one").prepend("<img class='sword left-sword' src='./images/left-sword.png' alt='sword pointing right' />");
+      $(".right-sword").remove();
     } else {
-      $(".pb-two").addClass("active");
-      $(".pb-one").removeClass("active");
+      $(".pb-two").prepend("<img class='sword right-sword' src='./images/right-sword.png' alt='sword pointing left' />");
+      $(".left-sword").remove();
     }
   },
 
