@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import $ from 'jquery';
 
 const domUpdates = {
@@ -50,7 +49,7 @@ const domUpdates = {
 
   revealCorrectAnswer: function(correctAnswer) {
     $(".answer").each(function() {
-      if($(this).text() === correctAnswer.answer) {
+      if ($(this).text() === correctAnswer.answer) {
         $(this).removeClass("hidden");
         $(this).parent().next().children().removeClass("hidden");
       }
@@ -92,13 +91,13 @@ const domUpdates = {
 
   animateKnight: function(currentRound) {
     let src = "./images/round-one.png";
-    if(currentRound === 2) {
+    if (currentRound === 2) {
       src = "./images/round-two.png";
     } else if (currentRound === 3) {
       src = "./images/final-round.png";
     }
     $(".round-banner-text").attr("src", src);
-    $(".round-banner").css({'right': '0px', 'display': 'block'}).animate({'right' : '3000px'}, 6000);
+    $(".round-banner").css({'right': '0px', 'display': 'block'}).animate({'right': '3000px'}, 6000);
   },
 
   revealTimer: function() {
@@ -127,11 +126,15 @@ const domUpdates = {
   showWinner: function(winner) {
     this.toggleMultiplierInputs(false);
     $(".winner-holder").removeClass("hidden");
-    $(".winner-holder").removeClass("hidden");
     $("#winner-name").text(winner.name);
     $("#winner-score").text(winner.score);
-  }
+  },
 
+  hideWinner: function() {
+    $(".winner-holder").addClass("hidden");
+    $(".sb-one > h6").text('00');
+    $(".sb-two > h6").text('00');
+  }
 }
 
 export default domUpdates;
