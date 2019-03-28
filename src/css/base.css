@@ -25,6 +25,12 @@ h6 {
   text-align: center;
 }
 
+.new-game-btn {
+  position: absolute;
+  right: 70px;
+  top: 20px;
+}
+
 .sword {
   position: absolute;
   top: 125px;
