@@ -8,15 +8,31 @@ const domUpdates = {
   },
   
   revealGame: function() {
-    $(".name-input-container").css("display", "none");
-    $(".game-area").css("display", "grid");
+    this.toggleNameInputContainer(false);
+    this.toggleGameArea(true);
   },
 
   hideGame: function() {
-    $(".game-area").css("display", "none");
-    $(".name-inputs").css("display", "none");
-    $(".multiplier-inputs").css("display", "block");
-    $(".name-input-container").css("display", "block");
+    this.toggleGameArea(false);
+    this.toggleNameInputs(false);
+    this.toggleMultiplierInputs(true);
+    this.toggleNameInputContainer(true);
+  },
+
+  toggleNameInputContainer: function(showThis) {
+    $(".name-input-container").toggle(showThis);
+  },
+
+  toggleNameInputs: function(showThis) {
+    $(".name-inputs").toggle(showThis);
+  },
+
+  toggleGameArea: function(showThis) {
+    $(".game-area").toggle(showThis);
+  },
+
+  toggleMultiplierInputs: function(showThis) {
+    $(".multiplier-inputs").toggle(showThis);
   },
 
   populateSurvery: function(round) {
@@ -46,13 +62,19 @@ const domUpdates = {
   },
 
   toggleActivePlayer: function(player1Turn) {
-    if (player1Turn) {
-      $(".pb-one").prepend("<img class='sword left-sword' src='./images/left-sword.png' alt='sword pointing right' />");
-      $(".right-sword").remove();
-    } else {
-      $(".pb-two").prepend("<img class='sword right-sword' src='./images/right-sword.png' alt='sword pointing left' />");
-      $(".left-sword").remove();
-    }
+    this.addSwordTurnIndicator(player1Turn);
+    this.removeOppositeSword(player1Turn);
+  },
+
+  addSwordTurnIndicator: function(player1Turn) {
+    let playerBox = player1Turn ? $(".pb-one") : $(".pb-two");
+    let swordSide = player1Turn ? "left" : "right";
+    playerBox.prepend(`<img class='sword ${swordSide}-sword' src='./images/${swordSide}-sword.png' alt='shiny silver sword' />`);
+  },
+
+  removeOppositeSword: function(player1Turn) {
+    let oppositeSide = player1Turn ? "right" : "left";
+    $(`.${oppositeSide}-sword`).remove();
   },
 
   clearInput: function() {
@@ -99,7 +121,7 @@ const domUpdates = {
   },
 
   showWinner: function(winner) {
-    $(".multiplier-inputs").css("display", "none");
+    this.toggleMultiplierInputs(false);
     $(".winner-holder").removeClass("hidden");
     $("#winner-name").text(winner.name);
     $("#winner-score").text(winner.score);
