@@ -1,6 +1,6 @@
 # GameTime - Family Feud
 #### [Ryan Barnett](https://github.com/RyanDBarnett) & [Jacob Bogart](https://github.com/jacobogart)
-An education project utilizing Object Oriented Programing and Test Driven Development to create a fully-playable web version of the gameshow Family Feud. 
+An educational project utilizing Object Oriented Programing and Test Driven Development to create a fully-playable web version of the gameshow Family Feud. 
 
 ## Instalation
 Clone the repo - https://github.com/jacobogart/RyanJacob-GameTime.git
@@ -21,9 +21,6 @@ Run `npm run test` to see test suite
 
 ## OOP Outline
 [OOP Outline Gist](https://gist.github.com/jacobogart/fd44f4330dad810e67a745d8828f7102)
-
-## Design Inspiration
-![Family Feud Board](https://i.dailymail.co.uk/i/pix/2016/07/11/23/362C379F00000578-0-image-a-48_1468277724217.jpg)
 
 ## Learning Goals
 * Design and implement OOP patterns
