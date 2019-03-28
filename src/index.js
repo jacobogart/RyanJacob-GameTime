@@ -37,7 +37,6 @@ import './images/right-sword.png';
 import './images/screenshot.png';
 
 import domUpdates from './domUpdates.js';
-import data from './gamedata.js';
 import Game from './Game.js';
 import Player from './Player.js';
 

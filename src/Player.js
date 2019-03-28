@@ -1,5 +1,4 @@
 import domUpdates from './domUpdates.js';
-import $ from 'jquery';
 
 class Player {
   constructor(name, num) {
@@ -21,7 +20,7 @@ class Player {
 
   makeFinalGuess(guess, game, round) {
     if (round.correctGuesses.length === 0 && round.incorrectGuesses === 0) {
-      round.startTimer($(".timer"), round, game);
+      round.startTimer(round, game);
     }
     if (this.checkGuess(round, guess)) {
       const correctAnswer = round.answers.find(a => a.answer.toUpperCase() === guess.toUpperCase());
