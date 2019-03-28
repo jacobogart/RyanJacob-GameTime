@@ -123,6 +123,7 @@ const domUpdates = {
   showWinner: function(winner) {
     this.toggleMultiplierInputs(false);
     $(".winner-holder").removeClass("hidden");
+    $(".winner-holder").removeClass("hidden");
     $("#winner-name").text(winner.name);
     $("#winner-score").text(winner.score);
   }
