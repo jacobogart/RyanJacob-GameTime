@@ -14,7 +14,7 @@ import Game from '../src/Game.js';
 import Player from '../src/Player.js';
 import domUpdates from '../src/domUpdates.js';
 
-chai.spy.on(domUpdates, ['incrementTimer'], () => true);
+chai.spy.on(domUpdates, ['incrementTimer', 'resetTimer'], () => true);
 
 
 describe('Final Round', function () {
@@ -71,5 +71,4 @@ describe('Final Round', function () {
     clock.tick(1000);
     expect(spy).to.have.been.called;    
   });
-
 });
