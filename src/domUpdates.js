@@ -47,6 +47,7 @@ const domUpdates = {
 
   toggleActivePlayer: function(player1Turn) {
     if(player1Turn) {
+      $(".pb-one").prepend("<img class='left-sword sword' src='./images/left-sword.png' alt='sword pointing right' />");
       $(".pb-one").addClass("active");
       $(".pb-two").removeClass("active");
     } else {
