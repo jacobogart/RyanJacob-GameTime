@@ -106,6 +106,10 @@ const domUpdates = {
     $(".start-timer-btn").removeClass('hidden');
   },
 
+  incrementTimer: function(seconds) {
+    $(".timer").text(seconds);
+  },
+
   toggleUserInput: function() {
     $(".user-input").toggleClass('hidden');
     $(".incorrectGuess-holder").toggleClass('hidden');

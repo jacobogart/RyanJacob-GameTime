@@ -4,19 +4,20 @@ import domUpdates from './domUpdates.js';
 class FinalRound extends Round {
   constructor(survey, answers) {
     super(survey, answers);
-    this.timer = 0;
+    this.timer = 30;
     this.correctGuesses = []
     this.incorrectGuesses = 0
   }
 
-  startTimer(display, round, game) {
-    var timer = 30, seconds;
+  startTimer(round, game) {
+    this.timer = 30; 
+    let seconds;
     let timerInterval = setInterval(function () {
-      timer--;
-      seconds = parseInt(timer % 60, 10);
-      seconds = timer < 10 ? "0" + seconds : seconds;
-      display.text(seconds);
-      if (timer <= 0) {
+      this.timer--;
+      seconds = parseInt(this.timer % 60, 10);
+      seconds = this.timer < 10 ? "0" + seconds : seconds;
+      domUpdates.incrementTimer(seconds);
+      if (this.timer <= 0) {
         clearInterval(timerInterval);
         this.addTotalScore(round, game);
       }
