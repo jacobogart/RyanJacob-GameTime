@@ -10,6 +10,7 @@ const domUpdates = {
   revealGame: function() {
     this.toggleNameInputContainer(false);
     this.toggleGameArea(true);
+    this.toggleStartNewGameBtn(true);
   },
 
   hideGame: function() {
@@ -17,6 +18,18 @@ const domUpdates = {
     this.toggleNameInputs(false);
     this.toggleMultiplierInputs(true);
     this.toggleNameInputContainer(true);
+  },
+
+  resetGame: function() {
+    this.toggleGameArea(false);
+    this.toggleNameInputContainer(true);
+    this.toggleNameInputs(true);
+    this.toggleStartNewGameBtn(false);
+    this.resetScore();
+  },
+
+  toggleStartNewGameBtn: function(showThis) {
+    $(".new-game-btn").toggle(showThis);
   },
 
   toggleNameInputContainer: function(showThis) {
@@ -59,6 +72,11 @@ const domUpdates = {
 
   updateScore: function(player, score) {
     player === 1 ? $(".sb-one > h6").text(score) : $(".sb-two > h6").text(score);
+  },
+
+  resetScore: function() {
+    $(".sb-one > h6").text('0');
+    $(".sb-two > h6").text('0');
   },
 
   toggleActivePlayer: function(player1Turn) {
