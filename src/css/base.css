@@ -9,168 +9,17 @@ button {
   color: white;
 }
 
-.final-rules {
-  margin: 0 auto;
-  font-size: 24px;
-  width: 82%;
-}
-
-.multi-holder {
-  display: inline-block;
-  width: 49%;
-}
-
-.multi-holder > * {
-  margin: 10px auto;
-  display: block;
-}
-
-.game-area {
-  margin: 50px auto;
-}
-
-.game-area {
-  width: 95%;
-  height: 90%;
-  margin: 0 auto;
-  display: none;
-  /* grid-row-gap: 10px; */
-  grid-template-columns: 1fr 2.8fr 1fr;
-  grid-template-rows: 1.3fr 1.1fr .85fr 470px;
-  grid-template-areas:
-    ". logo ."
-    ". survey ."
-    ". input ."
-    "player-one results player-two";
-  justify-items: center;
-}
-
-.logo-holder {
-  grid-area: logo;
-}
-
-.feud-logo {
-  display: block;
-  height: 60px;
-  width: 600px;
-  margin: 20px auto;
-}
-
-.round-banner {
-  position: fixed;
-  top: 100px;
-  display: none;
-  z-index: 10;
-}
-
-.round-banner-knight {
-  position: absolute;     
-  height: 266px;
-  width: 222px;
-}
-
-.round-banner-text {
-  position: absolute;
-  left: 230px;
-  top: 80px;
-}
-
-.survery-box {
-  grid-area: survey;
-  background-image: url("../images/text-banner.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 100%;
-}
-
-.survey {
-  text-align: center;
-  color: white; 
-  font-size: 22px;
-  margin: 10px auto;
-  width: 440px;
-}
-
-.result-box > *,
-.timer,
-.incorrectGuess-holder {
-  border: 5px solid #B02418;
-  background-color: #2E528E;
+h2 {
   color: white;
-}
-
-.result-one,
-.result-two,
-.result-three {
-  padding-left: 10px
-}
-
-
-.result-one-num,
-.result-two-num,
-.result-three-num {
-  border-left: none;
+  font-size: 40px;
   text-align: center;
-}
-
-.result-one,
-.result-two,
-.result-one-num,
-.result-two-num {
-  border-bottom: none;
-}
-
-.player-box {
-  width: 80%;
-  padding-top: 180px;
-}
-.player-name {
-  position: relative;
-  z-index: 2;
-  width: 130px;
-  height: 50px;
-  font-weight: 900;
-  margin: 200px auto 0;
-}
-
-.score-box {
-  width: 50px;
-  margin: -20px auto 0;
 }
 
 h4,
 h6 {
   color: white;
   font-size: 30px;
+  margin: 0 10px;
   margin: 25px auto;
   text-align: center;
-  margin: 0 10px;
-}
-
-.incorrectGuess-holder {
-  grid-area: input;
-  font-size: 20px;
-  height: 40px;
-}
-
-.incorrectGuess-holder p {
-  margin: 0;
-  padding: 10px;
-}
-
-.winner-holder {
-  padding-top: 100px;
-}
-
-h2 {
-  text-align: center;
-  color: white;
-  font-size: 40px;
-}
-
-#winner-name,
-#winner-score {
-  font-size: 60px;
-  margin: 10px;
 }

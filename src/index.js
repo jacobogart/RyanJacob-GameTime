@@ -12,12 +12,13 @@ import './css/layout.css';
 import './css/modules/result-box.css';
 import './css/modules/guess-input.css';
 import './css/modules/player-score.css';
-import './css/modules/multiplier.css';
 import './css/modules/round-banner.css';
 import './css/modules/survey-box.css';
 import './css/modules/game-area.css';
 import './css/modules/info-page.css';
+import './css/modules/multiplier.css';
 import './css/modules/timer.css';
+import './css/modules/winner.css';
 
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)

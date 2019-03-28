@@ -14,8 +14,7 @@
   width: 260px;
 }
 
-.result-box > *,
-.timer {
+.result-box > * {
   border: 5px solid #B02418;
   background-color: #2E528E;
   color: white;
