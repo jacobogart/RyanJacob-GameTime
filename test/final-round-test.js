@@ -4,6 +4,9 @@ const expect = chai.expect;
 import spies from 'chai-spies';
 chai.use(spies);
 
+var sinonChai = require("sinon-chai");
+chai.use(sinonChai);
+
 var sinon = require('sinon');
 
 import FinalRound from '../src/FinalRound.js';
@@ -52,7 +55,6 @@ describe('Final Round', function () {
   it('should have property of incorrectGuesses that starts at zero', () => {
     expect(finalRound.incorrectGuesses).to.equal(0);
   });
-
   it('should have a timer that increments be seconds', function () {
     expect(finalRound.timer).to.equal(30);
     finalRound.startTimer(finalRound, game)
@@ -60,6 +62,14 @@ describe('Final Round', function () {
     expect(finalRound.timer).to.equal(29);
     clock.next();
     expect(finalRound.timer).to.equal(28);
+  });
+  it('should call addTotalScore when the timer runs out', function () {
+    var spy = sinon.spy(finalRound, "addTotalScore");
+    finalRound.startTimer(finalRound, game)
+    clock.tick(29000);
+    expect(spy).to.not.have.been.called;
+    clock.tick(1000);
+    expect(spy).to.have.been.called;    
   });
 
 });
