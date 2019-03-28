@@ -22,6 +22,9 @@ Run `npm run test` to see test suite
 ## OOP Outline
 [OOP Outline Gist](https://gist.github.com/jacobogart/fd44f4330dad810e67a745d8828f7102)
 
+## OOP Blog Post
+[OOP/TDD: The Mise en Place of Coding](https://medium.com/@jacobbogart/oop-tdd-the-mise-en-place-of-coding-667d09b4aca8)
+
 ## Learning Goals
 * Design and implement OOP patterns
 * Create a robust test suite that thoroughly tests all functionality of a client-side application
