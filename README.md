@@ -9,6 +9,8 @@ Run `npm install` from the root directory
 
 Run `npm start` and visit localhost:8080 in your browser
 
+![Feud of Families Screenshot](./src/images/screenshot.png)
+
 ## Testing
 Website is fully tested with Mocha and Chai
 
@@ -19,6 +21,9 @@ Run `npm run test` to see test suite
 
 ## OOP Outline
 [OOP Outline Gist](https://gist.github.com/jacobogart/fd44f4330dad810e67a745d8828f7102)
+
+## OOP Blog Post
+[OOP/TDD: The Mise en Place of Coding](https://medium.com/@jacobbogart/oop-tdd-the-mise-en-place-of-coding-667d09b4aca8)
 
 ## Learning Goals
 * Design and implement OOP patterns
