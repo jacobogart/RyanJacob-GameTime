@@ -1,4 +1,7 @@
 .timer {
+  background-color: #2E528E;
+  border: 5px solid #B02418;
+  color: white;
   display: inline-block;
   font-size: 25px;
   margin: 0 10px;

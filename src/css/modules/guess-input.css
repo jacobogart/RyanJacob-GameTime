@@ -9,6 +9,23 @@
   top: 1.8px;
 }
 
+.incorrectGuess-holder {
+  border: 5px solid #B02418;
+  background-color: #2E528E;
+  color: white;
+}
+
+.incorrectGuess-holder {
+  grid-area: input;
+  font-size: 20px;
+  height: 40px;
+}
+
+.incorrectGuess-holder p {
+  margin: 0;
+  padding: 10px;
+}
+
 .wrong-guess,
 .correct-guess {
   margin: 10px auto 0;

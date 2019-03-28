@@ -18,6 +18,7 @@ import './css/modules/survey-box.css';
 import './css/modules/game-area.css';
 import './css/modules/info-page.css';
 import './css/modules/timer.css';
+import './css/modules/winner.css';
 
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
